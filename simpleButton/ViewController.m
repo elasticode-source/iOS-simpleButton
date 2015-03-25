@@ -42,12 +42,13 @@
 
 - (void) finishSyncNotification:(NSNotification *) notification
 {
+    NSString* buttonText = (NSString*)[ElastiCode valueForDynamicObject:@"Button text"];
     
     UIButton *btn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
     btn.frame= CGRectMake(125, 200, 125, 50);
-    [btn setTitle:@"Ok" forState:UIControlStateNormal];
+    [btn setTitle:buttonText forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(buttonClicked) forControlEvents:(UIControlEventTouchUpInside)];
     [self.view addSubview:btn];
-    
     
     switch ([ElastiCode stateIndexForCase:@"First Button"]){
         case 1:
@@ -63,6 +64,12 @@
     }
     
     [ElastiCode takeSnapShot:@"First Button"];
-    
+    [ElastiCode takeSnapShot:@"Button text"];
+}
+
+-(void) buttonClicked
+{
+    [ElastiCode goalReached:@"First Button"];
+    [ElastiCode dynamicObjectGoalReached:@"Button text"];
 }
 @end

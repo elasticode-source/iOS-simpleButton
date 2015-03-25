@@ -22,7 +22,7 @@
     [ElastiCode devModeWithLogging:elastiCodeLogLevelDetailed];
     // ------------------------------------------------------
     
-    [ElastiCode startSession:@"7p1oze5q9h7qtettoy1mipff"];
+    [ElastiCode startSession:@"pfxtbt5ixmkvpiue6akdp2ee"];
     // Register (listen) to local notification when session started
     [[NSNotificationCenter defaultCenter] addObserver: self
                                              selector: @selector(sessionStartedNotification)
@@ -63,7 +63,11 @@
 {
     // Add code here for defining cases / dynamic objects
     // and continue with the app flow
+    // Lets define a case with 3 options:
     [ElastiCode defineCase: @"First Button" withNumOfStates: 3];
+    
+    // And a dynamic object with string value and a default value of "Ok"
+    [ElastiCode defineDynamicObject:@"Button text" type:(ElastiCodeDObjType_string) defaultValue:@"Ok"];
     
     [[NSNotificationCenter defaultCenter]
      postNotificationName:@"finishedSync"

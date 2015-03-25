@@ -22,7 +22,7 @@
     [ElastiCode devModeWithLogging:elastiCodeLogLevelDetailed];
     // ------------------------------------------------------
     
-    [ElastiCode startSession:@"pfxtbt5ixmkvpiue6akdp2ee"];
+    [ElastiCode startSession:@"<#App key#>"];
     // Register (listen) to local notification when session started
     [[NSNotificationCenter defaultCenter] addObserver: self
                                              selector: @selector(sessionStartedNotification)

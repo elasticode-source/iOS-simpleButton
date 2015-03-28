@@ -30,7 +30,7 @@ Connecting the app key to the SDK is VIA the appDelegate :
 
 ## Motivation
 
-ama-zone.co is an app that enables you to learn the  
+simpleButton is an app that enables you to learn the  
 1. How to integrate the SDK  
 2. How to manage and control your experiences VIA the dashboard  
 3. How to correlate relevant experiences to relevant segments ( audiences )  
